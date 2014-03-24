@@ -1,11 +1,11 @@
 ## Node.js Example Basic Authentication
-Using Node.js, Express, and Angular to password protect a RESTful resource with basic header
+Using Node.js, Express, Passport, and Angular to password protect a RESTful resource with basic header
 authentication.
 
 ## Passport-http
-[Passport-http]() had to be modified to prevent WWW-Authenticate headers from being returned otherwise users would see a browser based login window popup every time they recieve a 401 error.
+[Passport-http](https://github.com/jaredhanson/passport-http) had to be modified to prevent WWW-Authenticate headers from being returned otherwise users would see a browser based login window popup every time they recieve a 401 error.
 
-The needed change was made on this fork [gt-passport-http]() this adds a new parameter which allows a user to specify if they want the WWW-Authenticate headers returned or not.
+The needed change was made on this fork [gt-passport-http](https://github.com/geothird/passport-http) this adds a new parameter which allows a user to specify if they want the WWW-Authenticate headers returned or not.
 
 ## Basic usage
 **Server:**
