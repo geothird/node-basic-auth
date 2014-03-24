@@ -1,0 +1,22 @@
+doctype html
+html(lang='en', ng-app='node-basic-auth')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-cookies.min.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/services.js')
+    script(src='/javascripts/controllers.js')
+  body(ng-controller='LoginCtrl')
+    div.container
+      h1= title
+      p This app shows how to use basic http authentication with Express and Passport.
+      a(ng-hide="currentUser", href="#/login") Login
+      a(ng-show="currentUser", href="javascript:void(0)", ng-click="logoutUser()") Logout
+    div.container(ng-view)
+      block content
